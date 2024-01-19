@@ -10,12 +10,21 @@
 		00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01512B59C99A003DD59C /* AppDelegate.swift */; };
 		00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01532B59C99A003DD59C /* SceneDelegate.swift */; };
 		00BE01562B59C99A003DD59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01552B59C99A003DD59C /* ViewController.swift */; };
-		00BE01592B59C99A003DD59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE01572B59C99A003DD59C /* Main.storyboard */; };
 		00BE015B2B59C99C003DD59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE015A2B59C99C003DD59C /* Assets.xcassets */; };
 		00BE015E2B59C99C003DD59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE015C2B59C99C003DD59C /* LaunchScreen.storyboard */; };
 		00BE01692B59C99C003DD59C /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01682B59C99C003DD59C /* ArtGalleryTests.swift */; };
 		00BE01732B59C99D003DD59C /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01722B59C99D003DD59C /* ArtGalleryUITests.swift */; };
 		00BE01752B59C99D003DD59C /* ArtGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01742B59C99D003DD59C /* ArtGalleryUITestsLaunchTests.swift */; };
+		00BE01862B59D3B5003DD59C /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01852B59D3B5003DD59C /* NetworkProvider.swift */; };
+		00BE01892B59D4E0003DD59C /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01882B59D4E0003DD59C /* NetworkServiceProtocol.swift */; };
+		00BE018B2B59D634003DD59C /* NetworkResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE018A2B59D634003DD59C /* NetworkResponseData.swift */; };
+		00BE018D2B59D6FB003DD59C /* NetworkHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE018C2B59D6FB003DD59C /* NetworkHTTPMethod.swift */; };
+		00BE01902B5A8376003DD59C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE018F2B5A8376003DD59C /* NetworkService.swift */; };
+		00BE01922B5A84C5003DD59C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01912B5A84C5003DD59C /* NetworkError.swift */; };
+		00BE01942B5A88BC003DD59C /* ArtworksServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */; };
+		00BE01982B5A8B8A003DD59C /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01972B5A8B8A003DD59C /* Artwork.swift */; };
+		00BE019A2B5A8F44003DD59C /* ArtworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */; };
+		00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +49,6 @@
 		00BE01512B59C99A003DD59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00BE01532B59C99A003DD59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		00BE01552B59C99A003DD59C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00BE01582B59C99A003DD59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00BE015A2B59C99C003DD59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BE015D2B59C99C003DD59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE015F2B59C99C003DD59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,16 @@
 		00BE016E2B59C99D003DD59C /* ArtGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE01722B59C99D003DD59C /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
 		00BE01742B59C99D003DD59C /* ArtGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00BE01852B59D3B5003DD59C /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		00BE01882B59D4E0003DD59C /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		00BE018A2B59D634003DD59C /* NetworkResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseData.swift; sourceTree = "<group>"; };
+		00BE018C2B59D6FB003DD59C /* NetworkHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPMethod.swift; sourceTree = "<group>"; };
+		00BE018F2B5A8376003DD59C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		00BE01912B5A84C5003DD59C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksServiceProtocol.swift; sourceTree = "<group>"; };
+		00BE01972B5A8B8A003DD59C /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksViewController.swift; sourceTree = "<group>"; };
+		00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,14 @@
 		00BE01502B59C99A003DD59C /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
+				00BE01952B5A8B6D003DD59C /* Domain */,
+				00BE01842B59CA46003DD59C /* ArtistDetails */,
+				00BE01832B59CA3C003DD59C /* Artworks */,
+				00BE01822B59CA1F003DD59C /* Storage */,
+				00BE01812B59CA11003DD59C /* NetworkLayer */,
 				00BE01512B59C99A003DD59C /* AppDelegate.swift */,
 				00BE01532B59C99A003DD59C /* SceneDelegate.swift */,
 				00BE01552B59C99A003DD59C /* ViewController.swift */,
-				00BE01572B59C99A003DD59C /* Main.storyboard */,
 				00BE015A2B59C99C003DD59C /* Assets.xcassets */,
 				00BE015C2B59C99C003DD59C /* LaunchScreen.storyboard */,
 				00BE015F2B59C99C003DD59C /* Info.plist */,
@@ -125,6 +147,75 @@
 				00BE01742B59C99D003DD59C /* ArtGalleryUITestsLaunchTests.swift */,
 			);
 			path = ArtGalleryUITests;
+			sourceTree = "<group>";
+		};
+		00BE01812B59CA11003DD59C /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				00BE018E2B59D755003DD59C /* Artworks */,
+				00BE01872B59D4D8003DD59C /* Request */,
+				00BE01852B59D3B5003DD59C /* NetworkProvider.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		00BE01822B59CA1F003DD59C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		00BE01832B59CA3C003DD59C /* Artworks */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */,
+				00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */,
+			);
+			path = Artworks;
+			sourceTree = "<group>";
+		};
+		00BE01842B59CA46003DD59C /* ArtistDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ArtistDetails;
+			sourceTree = "<group>";
+		};
+		00BE01872B59D4D8003DD59C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01882B59D4E0003DD59C /* NetworkServiceProtocol.swift */,
+				00BE018A2B59D634003DD59C /* NetworkResponseData.swift */,
+				00BE018C2B59D6FB003DD59C /* NetworkHTTPMethod.swift */,
+				00BE01912B5A84C5003DD59C /* NetworkError.swift */,
+				00BE018F2B5A8376003DD59C /* NetworkService.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		00BE018E2B59D755003DD59C /* Artworks */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */,
+			);
+			path = Artworks;
+			sourceTree = "<group>";
+		};
+		00BE01952B5A8B6D003DD59C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01962B5A8B73003DD59C /* Artworks */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		00BE01962B5A8B73003DD59C /* Artworks */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01972B5A8B8A003DD59C /* Artwork.swift */,
+			);
+			path = Artworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +324,6 @@
 			files = (
 				00BE015E2B59C99C003DD59C /* LaunchScreen.storyboard in Resources */,
 				00BE015B2B59C99C003DD59C /* Assets.xcassets in Resources */,
-				00BE01592B59C99A003DD59C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +349,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BE01562B59C99A003DD59C /* ViewController.swift in Sources */,
+				00BE01982B5A8B8A003DD59C /* Artwork.swift in Sources */,
+				00BE01862B59D3B5003DD59C /* NetworkProvider.swift in Sources */,
+				00BE01902B5A8376003DD59C /* NetworkService.swift in Sources */,
+				00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */,
+				00BE018D2B59D6FB003DD59C /* NetworkHTTPMethod.swift in Sources */,
 				00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */,
 				00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */,
+				00BE01922B5A84C5003DD59C /* NetworkError.swift in Sources */,
+				00BE01892B59D4E0003DD59C /* NetworkServiceProtocol.swift in Sources */,
+				00BE01942B5A88BC003DD59C /* ArtworksServiceProtocol.swift in Sources */,
+				00BE018B2B59D634003DD59C /* NetworkResponseData.swift in Sources */,
+				00BE019A2B5A8F44003DD59C /* ArtworksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +397,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		00BE01572B59C99A003DD59C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00BE01582B59C99A003DD59C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00BE015C2B59C99C003DD59C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -450,6 +542,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,9 +550,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -478,6 +573,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,9 +581,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
