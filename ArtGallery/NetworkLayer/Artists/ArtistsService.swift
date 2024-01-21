@@ -1,21 +1,21 @@
 //
-//  ArtworksService.swift
+//  ArtistsService.swift
 //  ArtGallery
 //
-//  Created by Artem Orlov on 19.01.24.
+//  Created by Artem Orlov on 21.01.24.
 //
 
 import Foundation
 
-final class ArtworksService: ArtworksServiceProtocol {
+final class ArtistsService: ArtistsServiceProtocol {
     private let networkService: NetworkServiceProtocol
 
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
 
-    func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void) {
-        networkService.request("https://api.artic.edu/api/v1/artworks?page=\(page)&limit=\(limit)",
+    func loadArtist(id: Int, completion: @escaping (Result<ArtistModel, NetworkError>) -> Void) {
+        networkService.request("https://api.artic.edu/api/v1/artists/",
                                method: .get,
                                parameters: nil) { result in
             switch result {
@@ -25,8 +25,8 @@ final class ArtworksService: ArtworksServiceProtocol {
                     return
                 }
                 do {
-                    let artworks = try JSONDecoder().decode(RootModel<[ArtworkModel]>.self, from: jsonData)
-                    completion(.success(artworks.data))
+                    let rootModel = try JSONDecoder().decode(RootModel<ArtistModel>.self, from: jsonData)
+                    completion(.success(rootModel.data))
                 } catch {
                     completion(.failure(.dataIsEmpty))
                 }
