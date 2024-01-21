@@ -11,6 +11,10 @@ final class NetworkService: NetworkServiceProtocol {
 
     private let session = URLSession.shared
 
+    static let shared: NetworkServiceProtocol = NetworkService()
+
+    private init() {}
+
     func request(_ url: String,
                  method: NetworkHTTPMethod,
                  parameters: [String : Any]?,

@@ -15,7 +15,7 @@ final class ArtistsService: ArtistsServiceProtocol {
     }
 
     func loadArtist(id: Int, completion: @escaping (Result<ArtistModel, NetworkError>) -> Void) {
-        networkService.request("https://api.artic.edu/api/v1/artists/",
+        networkService.request("https://api.artic.edu/api/v1/artists/\(id)",
                                method: .get,
                                parameters: nil) { result in
             switch result {

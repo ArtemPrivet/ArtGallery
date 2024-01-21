@@ -18,6 +18,6 @@ final class ArtworkCell: UICollectionViewCell {
         artNameLabel.text = artwork.title
 
         // TODO: Load image
-        imageView.backgroundColor = .blue
+        imageView.image = UIImage(named: "image_placeholder")
     }
 }

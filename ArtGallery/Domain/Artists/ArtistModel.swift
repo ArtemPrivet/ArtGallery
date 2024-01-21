@@ -10,8 +10,8 @@ import Foundation
 struct ArtistModel: Decodable {
     let id: Int
     let title: String
-    let birthDate: Int
-    let deathDate: Int
+    let birthDate: Int?
+    let deathDate: Int?
     let description: String?
 
     enum CodingKeys: String, CodingKey {

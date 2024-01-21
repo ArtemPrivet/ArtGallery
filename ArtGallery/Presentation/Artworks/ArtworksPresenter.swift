@@ -9,6 +9,7 @@ import Foundation
 
 protocol ArtworksPresenterProtocol: AnyObject {
     func didScroll(to item: Int)
+    func didSelect(item: Int)
 
     var artworks: [ArtworkModel] { get }
 }
@@ -16,15 +17,19 @@ protocol ArtworksPresenterProtocol: AnyObject {
 final class ArtworksPresenter {
 
     private let networking: ArtworksServiceProtocol
+    private let router: ArtworksRouterProtocol
     private let limit = 30
 
     weak var view: ArtworksViewProtocol?
 
     var artworks: [ArtworkModel] = []
 
-    init(networking: ArtworksServiceProtocol) {
+    init(
+        networking: ArtworksServiceProtocol,
+        router: ArtworksRouterProtocol
+    ) {
         self.networking = networking
-
+        self.router = router
         loadArtworks()
     }
 
@@ -58,5 +63,9 @@ extension ArtworksPresenter: ArtworksPresenterProtocol {
         if item == artworks.count - limit / 2 {
                 loadArtworks()
         }
+    }
+
+    func didSelect(item: Int) {
+        router.didSelectArtwork(artworks[item])
     }
 }

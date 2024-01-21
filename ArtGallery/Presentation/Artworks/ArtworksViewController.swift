@@ -30,7 +30,6 @@ final class ArtworksViewController: UIViewController {
         self.title = "Artworks"
 
         createCollectionView()
-
     }
 
     private func createCollectionView() {
@@ -86,5 +85,9 @@ extension ArtworksViewController: ArtworksViewProtocol {
 extension ArtworksViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         presenter.didScroll(to: indexPath.item)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelect(item: indexPath.item)
     }
 }
