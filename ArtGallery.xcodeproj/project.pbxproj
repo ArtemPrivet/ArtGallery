@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01512B59C99A003DD59C /* AppDelegate.swift */; };
 		00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01532B59C99A003DD59C /* SceneDelegate.swift */; };
-		00BE01562B59C99A003DD59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01552B59C99A003DD59C /* ViewController.swift */; };
 		00BE015B2B59C99C003DD59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE015A2B59C99C003DD59C /* Assets.xcassets */; };
 		00BE015E2B59C99C003DD59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE015C2B59C99C003DD59C /* LaunchScreen.storyboard */; };
 		00BE01692B59C99C003DD59C /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01682B59C99C003DD59C /* ArtGalleryTests.swift */; };
@@ -22,9 +21,13 @@
 		00BE01902B5A8376003DD59C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE018F2B5A8376003DD59C /* NetworkService.swift */; };
 		00BE01922B5A84C5003DD59C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01912B5A84C5003DD59C /* NetworkError.swift */; };
 		00BE01942B5A88BC003DD59C /* ArtworksServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */; };
-		00BE01982B5A8B8A003DD59C /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01972B5A8B8A003DD59C /* Artwork.swift */; };
+		00BE01982B5A8B8A003DD59C /* ArtworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01972B5A8B8A003DD59C /* ArtworkModel.swift */; };
 		00BE019A2B5A8F44003DD59C /* ArtworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */; };
 		00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */; };
+		00BE01A02B5AAA6E003DD59C /* ArtworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BE019F2B5AAA6E003DD59C /* ArtworkCell.xib */; };
+		00BE01A22B5AAB3A003DD59C /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01A12B5AAB3A003DD59C /* ArtworkCell.swift */; };
+		00BE01A42B5B12A5003DD59C /* ArtworksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01A32B5B12A5003DD59C /* ArtworksService.swift */; };
+		00BE01A62B5B1D5B003DD59C /* ArtworksRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01A52B5B1D5B003DD59C /* ArtworksRootModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,6 @@
 		00BE014E2B59C99A003DD59C /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE01512B59C99A003DD59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00BE01532B59C99A003DD59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00BE01552B59C99A003DD59C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00BE015A2B59C99C003DD59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BE015D2B59C99C003DD59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE015F2B59C99C003DD59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,9 +66,13 @@
 		00BE018F2B5A8376003DD59C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		00BE01912B5A84C5003DD59C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksServiceProtocol.swift; sourceTree = "<group>"; };
-		00BE01972B5A8B8A003DD59C /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		00BE01972B5A8B8A003DD59C /* ArtworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkModel.swift; sourceTree = "<group>"; };
 		00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksViewController.swift; sourceTree = "<group>"; };
 		00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksPresenter.swift; sourceTree = "<group>"; };
+		00BE019F2B5AAA6E003DD59C /* ArtworkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtworkCell.xib; sourceTree = "<group>"; };
+		00BE01A12B5AAB3A003DD59C /* ArtworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
+		00BE01A32B5B12A5003DD59C /* ArtworksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksService.swift; sourceTree = "<group>"; };
+		00BE01A52B5B1D5B003DD59C /* ArtworksRootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRootModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,6 @@
 				00BE01812B59CA11003DD59C /* NetworkLayer */,
 				00BE01512B59C99A003DD59C /* AppDelegate.swift */,
 				00BE01532B59C99A003DD59C /* SceneDelegate.swift */,
-				00BE01552B59C99A003DD59C /* ViewController.swift */,
 				00BE015A2B59C99C003DD59C /* Assets.xcassets */,
 				00BE015C2B59C99C003DD59C /* LaunchScreen.storyboard */,
 				00BE015F2B59C99C003DD59C /* Info.plist */,
@@ -171,6 +176,8 @@
 			children = (
 				00BE01992B5A8F44003DD59C /* ArtworksViewController.swift */,
 				00BE019B2B5A8F7F003DD59C /* ArtworksPresenter.swift */,
+				00BE019F2B5AAA6E003DD59C /* ArtworkCell.xib */,
+				00BE01A12B5AAB3A003DD59C /* ArtworkCell.swift */,
 			);
 			path = Artworks;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */,
+				00BE01A32B5B12A5003DD59C /* ArtworksService.swift */,
 			);
 			path = Artworks;
 			sourceTree = "<group>";
@@ -213,7 +221,8 @@
 		00BE01962B5A8B73003DD59C /* Artworks */ = {
 			isa = PBXGroup;
 			children = (
-				00BE01972B5A8B8A003DD59C /* Artwork.swift */,
+				00BE01972B5A8B8A003DD59C /* ArtworkModel.swift */,
+				00BE01A52B5B1D5B003DD59C /* ArtworksRootModel.swift */,
 			);
 			path = Artworks;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BE015E2B59C99C003DD59C /* LaunchScreen.storyboard in Resources */,
+				00BE01A02B5AAA6E003DD59C /* ArtworkCell.xib in Resources */,
 				00BE015B2B59C99C003DD59C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,15 +358,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BE01562B59C99A003DD59C /* ViewController.swift in Sources */,
-				00BE01982B5A8B8A003DD59C /* Artwork.swift in Sources */,
+				00BE01982B5A8B8A003DD59C /* ArtworkModel.swift in Sources */,
 				00BE01862B59D3B5003DD59C /* NetworkProvider.swift in Sources */,
 				00BE01902B5A8376003DD59C /* NetworkService.swift in Sources */,
 				00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */,
+				00BE01A42B5B12A5003DD59C /* ArtworksService.swift in Sources */,
 				00BE018D2B59D6FB003DD59C /* NetworkHTTPMethod.swift in Sources */,
 				00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */,
 				00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */,
 				00BE01922B5A84C5003DD59C /* NetworkError.swift in Sources */,
+				00BE01A62B5B1D5B003DD59C /* ArtworksRootModel.swift in Sources */,
+				00BE01A22B5AAB3A003DD59C /* ArtworkCell.swift in Sources */,
 				00BE01892B59D4E0003DD59C /* NetworkServiceProtocol.swift in Sources */,
 				00BE01942B5A88BC003DD59C /* ArtworksServiceProtocol.swift in Sources */,
 				00BE018B2B59D634003DD59C /* NetworkResponseData.swift in Sources */,
@@ -539,9 +551,8 @@
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,9 +581,8 @@
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

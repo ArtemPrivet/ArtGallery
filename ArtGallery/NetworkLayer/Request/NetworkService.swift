@@ -29,7 +29,9 @@ final class NetworkService: NetworkServiceProtocol {
                 return
             }
 
-            completion(.success(NetworkResponseData(data: data)))
+            let jsonData = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+
+            completion(.success(NetworkResponseData(jsonData: jsonData, data: data)))
         }.resume()
     }
 }

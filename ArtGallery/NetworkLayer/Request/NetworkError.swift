@@ -9,4 +9,5 @@ import Foundation
 
 enum NetworkError: Error {
     case incorrectURL
+    case dataIsEmpty
 }

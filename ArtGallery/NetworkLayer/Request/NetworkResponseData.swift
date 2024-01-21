@@ -8,11 +8,11 @@
 import Foundation
 
 struct NetworkResponseData {
-    let body: [AnyHashable: Any]?
+    let jsonData: [String: Any]?
     let data: Data?
 
-    init(body: [AnyHashable : Any]? = nil, data: Data? = nil) {
-        self.body = body
+    init(jsonData: [String : Any]? = nil, data: Data? = nil) {
+        self.jsonData = jsonData
         self.data = data
     }
 }

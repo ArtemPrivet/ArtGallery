@@ -8,7 +8,5 @@
 import Foundation
 
 protocol ArtworksServiceProtocol: AnyObject {
-    func loadArtworks(page: Int, completion: @escaping ) {
-
-    }
+    func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void)
 }
