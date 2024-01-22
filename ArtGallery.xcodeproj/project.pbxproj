@@ -34,6 +34,7 @@
 		00BE01B42B5D65AE003DD59C /* ArtDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BE01B32B5D65AE003DD59C /* ArtDetailsView.xib */; };
 		00BE01B62B5D7E6D003DD59C /* ArtDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01B52B5D7E6D003DD59C /* ArtDetailsPresenter.swift */; };
 		00BE01BA2B5D8A64003DD59C /* ArtworksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01B92B5D8A64003DD59C /* ArtworksRouter.swift */; };
+		00BE01BD2B5E7C96003DD59C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 00BE01BC2B5E7C96003DD59C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BE01BD2B5E7C96003DD59C /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +295,9 @@
 			dependencies = (
 			);
 			name = ArtGallery;
+			packageProductDependencies = (
+				00BE01BC2B5E7C96003DD59C /* Kingfisher */,
+			);
 			productName = ArtGallery;
 			productReference = 00BE014E2B59C99A003DD59C /* ArtGallery.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +370,9 @@
 				Base,
 			);
 			mainGroup = 00BE01452B59C99A003DD59C;
+			packageReferences = (
+				00BE01BB2B5E7C96003DD59C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 00BE014F2B59C99A003DD59C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -771,6 +779,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00BE01BB2B5E7C96003DD59C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00BE01BC2B5E7C96003DD59C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00BE01BB2B5E7C96003DD59C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00BE01462B59C99A003DD59C /* Project object */;
 }

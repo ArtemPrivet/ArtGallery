@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ArtworkCell: UICollectionViewCell {
 
@@ -19,5 +20,9 @@ final class ArtworkCell: UICollectionViewCell {
 
         // TODO: Load image
         imageView.image = UIImage(named: "image_placeholder")
+        if let imageID = artwork.imageID {
+            let url = URL(string: "https://www.artic.edu/iiif/2/\(imageID)/full/200,/0/default.jpg")
+            imageView.kf.setImage(with: url, placeholder: UIImage(named: "image_placeholder"))
+        }
     }
 }

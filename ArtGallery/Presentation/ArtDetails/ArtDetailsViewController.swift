@@ -15,7 +15,7 @@ protocol ArtDetailsViewProtocol: AnyObject {
 final class ArtDetailsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageAspectRatioConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
@@ -43,7 +43,20 @@ final class ArtDetailsViewController: UIViewController {
 extension ArtDetailsViewController: ArtDetailsViewProtocol {
     func update(artwork: ArtworkModel) {
         imageView.backgroundColor = .cyan
-            titleLabel.text = artwork.title
+        titleLabel.text = artwork.title
+
+        if let imageID = artwork.imageID {
+            let url = URL(string: "https://www.artic.edu/iiif/2/\(imageID)/full/200,/0/default.jpg")
+            imageView.kf.setImage(with: url, placeholder: UIImage(named: "image_placeholder"))
+        }
+
+//        imageAspectRatioConstraint.constant = CGFloat(artwork.thumbnail.height) / CGFloat(artwork.thumbnail.width)
+        if let thumbnail = artwork.thumbnail {
+            imageViewHeightConstraint.isActive = false
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: CGFloat(thumbnail.height) / CGFloat(thumbnail.width)).isActive = true
+            imageView.layoutIfNeeded()
+        }
+
     }
 
     func update(artist: ArtistModel) {

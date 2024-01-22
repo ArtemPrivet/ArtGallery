@@ -14,8 +14,8 @@
                 <outlet property="artistDescriptionLabel" destination="44Q-gn-Cb0" id="WES-69-kaV"/>
                 <outlet property="artistLifeLabel" destination="xNc-O4-9n7" id="E5t-9S-4jp"/>
                 <outlet property="artistNameLabel" destination="Dlu-kW-DEv" id="uGw-cz-Sll"/>
-                <outlet property="imageAspectRatioConstraint" destination="tWX-ss-tX8" id="uH8-bp-yTT"/>
                 <outlet property="imageView" destination="0Sd-ZR-eBI" id="iah-7u-Bb7"/>
+                <outlet property="imageViewHeightConstraint" destination="1gW-xY-k5T" id="1A7-cq-I2s"/>
                 <outlet property="titleLabel" destination="fUf-H3-gB7" id="bdi-Sd-DC2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sIt-eS-ZE0"/>
             </connections>
@@ -34,7 +34,7 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Sd-ZR-eBI">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="0Sd-ZR-eBI" secondAttribute="height" multiplier="393:128" id="tWX-ss-tX8"/>
+                                        <constraint firstAttribute="height" constant="128" id="1gW-xY-k5T"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-H3-gB7">
