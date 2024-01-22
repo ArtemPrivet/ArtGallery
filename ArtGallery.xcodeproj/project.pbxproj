@@ -34,6 +34,9 @@
 		00BE01BA2B5D8A64003DD59C /* ArtworksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01B92B5D8A64003DD59C /* ArtworksRouter.swift */; };
 		00BE01BD2B5E7C96003DD59C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 00BE01BC2B5E7C96003DD59C /* Kingfisher */; };
 		00BE01BF2B5ED5B4003DD59C /* ArtDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01BE2B5ED5B4003DD59C /* ArtDetailsViewController.swift */; };
+		00BE01C12B5EE5C5003DD59C /* ArtworksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01C02B5EE5C5003DD59C /* ArtworksPresenterTests.swift */; };
+		00BE01C32B5EE649003DD59C /* ArtworksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01C22B5EE649003DD59C /* ArtworksServiceMock.swift */; };
+		00BE01C62B5EE7BC003DD59C /* ArtworksRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01C52B5EE7BC003DD59C /* ArtworksRouterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		00BE01B52B5D7E6D003DD59C /* ArtDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailsPresenter.swift; sourceTree = "<group>"; };
 		00BE01B92B5D8A64003DD59C /* ArtworksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRouter.swift; sourceTree = "<group>"; };
 		00BE01BE2B5ED5B4003DD59C /* ArtDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailsViewController.swift; sourceTree = "<group>"; };
+		00BE01C02B5EE5C5003DD59C /* ArtworksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksPresenterTests.swift; sourceTree = "<group>"; };
+		00BE01C22B5EE649003DD59C /* ArtworksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksServiceMock.swift; sourceTree = "<group>"; };
+		00BE01C52B5EE7BC003DD59C /* ArtworksRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRouterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +157,9 @@
 		00BE01672B59C99C003DD59C /* ArtGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				00BE01C42B5EE6D0003DD59C /* Mocks */,
 				00BE01682B59C99C003DD59C /* ArtGalleryTests.swift */,
+				00BE01C02B5EE5C5003DD59C /* ArtworksPresenterTests.swift */,
 			);
 			path = ArtGalleryTests;
 			sourceTree = "<group>";
@@ -274,6 +282,15 @@
 				00BE01832B59CA3C003DD59C /* Artworks */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		00BE01C42B5EE6D0003DD59C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				00BE01C22B5EE649003DD59C /* ArtworksServiceMock.swift */,
+				00BE01C52B5EE7BC003DD59C /* ArtworksRouterMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +458,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BE01692B59C99C003DD59C /* ArtGalleryTests.swift in Sources */,
+				00BE01C32B5EE649003DD59C /* ArtworksServiceMock.swift in Sources */,
+				00BE01C12B5EE5C5003DD59C /* ArtworksPresenterTests.swift in Sources */,
+				00BE01C62B5EE7BC003DD59C /* ArtworksRouterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

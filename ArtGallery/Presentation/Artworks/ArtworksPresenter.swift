@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ArtworksPresenterProtocol: AnyObject {
+    func didLoadView()
     func didScroll(to item: Int)
     func didSelect(item: Int)
 
@@ -18,7 +19,8 @@ final class ArtworksPresenter {
 
     private let networking: ArtworksServiceProtocol
     private let router: ArtworksRouterProtocol
-    private let limit = 30
+    private let limit: Int
+    private var isLoading = false
 
     weak var view: ArtworksViewProtocol?
 
@@ -26,31 +28,28 @@ final class ArtworksPresenter {
 
     init(
         networking: ArtworksServiceProtocol,
-        router: ArtworksRouterProtocol
+        router: ArtworksRouterProtocol,
+        limit: Int = 30
     ) {
         self.networking = networking
         self.router = router
-        loadArtworks()
+        self.limit = limit
     }
 
-    private var isLoading = false
-
-    func loadArtworks() {
+    private func loadArtworks() {
         guard isLoading == false else { return }
         isLoading = true
         networking.loadArtworks(page: getNextPage(), limit: limit) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.isLoading = false
+            self?.isLoading = false
 
-                switch result {
-                case .success(let artworks):
-                    guard let self = self else { return }
-                    let uniqueArtworks = self.removeDuplicates(from: artworks)
-                    self.artworks.append(contentsOf: uniqueArtworks)
-                    self.view?.updateArtworks()
-                case .failure(let failure):
-                    print(failure.localizedDescription)
-                }
+            switch result {
+            case .success(let artworks):
+                guard let self = self else { return }
+                let uniqueArtworks = self.removeDuplicates(from: artworks)
+                self.artworks.append(contentsOf: uniqueArtworks)
+                self.view?.updateArtworks()
+            case .failure(let failure):
+                print(failure.localizedDescription)
             }
         }
     }
@@ -72,9 +71,13 @@ final class ArtworksPresenter {
 }
 
 extension ArtworksPresenter: ArtworksPresenterProtocol {
+    func didLoadView() {
+        loadArtworks()
+    }
+
     func didScroll(to item: Int) {
         if item == artworks.count - limit / 2 {
-                loadArtworks()
+            loadArtworks()
         }
     }
 

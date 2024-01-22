@@ -18,20 +18,23 @@ final class ArtworksService: ArtworksServiceProtocol {
         networkService.request("https://api.artic.edu/api/v1/artworks?page=\(page)&limit=\(limit)",
                                method: .get,
                                parameters: nil) { result in
-            switch result {
-            case .success(let data):
-                guard let jsonData = data.data else {
-                    completion(.failure(.dataIsEmpty))
-                    return
+            DispatchQueue.main.async {
+            
+                switch result {
+                case .success(let data):
+                    guard let jsonData = data.data else {
+                        completion(.failure(.dataIsEmpty))
+                        return
+                    }
+                    do {
+                        let artworks = try JSONDecoder().decode(RootModel<[ArtworkModel]>.self, from: jsonData)
+                        completion(.success(artworks.data))
+                    } catch {
+                        completion(.failure(.dataIsEmpty))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-                do {
-                    let artworks = try JSONDecoder().decode(RootModel<[ArtworkModel]>.self, from: jsonData)
-                    completion(.success(artworks.data))
-                } catch {
-                    completion(.failure(.dataIsEmpty))
-                }
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
     }

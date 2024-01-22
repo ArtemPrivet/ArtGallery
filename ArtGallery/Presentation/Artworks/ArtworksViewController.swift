@@ -30,6 +30,7 @@ final class ArtworksViewController: UIViewController {
         self.title = "Artworks"
 
         createCollectionView()
+        presenter.didLoadView()
     }
 
     private func createCollectionView() {
