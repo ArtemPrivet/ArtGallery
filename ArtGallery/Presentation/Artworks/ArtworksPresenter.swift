@@ -44,8 +44,10 @@ final class ArtworksPresenter {
 
                 switch result {
                 case .success(let artworks):
-                    self?.artworks.append(contentsOf: artworks)
-                    self?.view?.updateArtworks()
+                    guard let self = self else { return }
+                    let uniqueArtworks = self.removeDuplicates(from: artworks)
+                    self.artworks.append(contentsOf: uniqueArtworks)
+                    self.view?.updateArtworks()
                 case .failure(let failure):
                     print(failure.localizedDescription)
                 }
@@ -54,7 +56,18 @@ final class ArtworksPresenter {
     }
 
     private func getNextPage() -> Int {
-        return artworks.count / limit + 1
+        return (artworks.count + limit - 1) / limit + 1
+    }
+
+    private func removeDuplicates(from newArtworks: [ArtworkModel]) -> [ArtworkModel] {
+        var uniqueArtworks: [ArtworkModel] = []
+        for artwork in newArtworks {
+            if !artworks.contains(where: { $0.id == artwork.id }) {
+                uniqueArtworks.append(artwork)
+            }
+        }
+        print(uniqueArtworks.count)
+        return uniqueArtworks
     }
 }
 
