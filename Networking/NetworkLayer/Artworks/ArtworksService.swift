@@ -5,16 +5,16 @@
 //  Created by Artem Orlov on 19.01.24.
 //
 
-import Foundation
+import Domain
 
-final class ArtworksService: ArtworksServiceProtocol {
+public final class ArtworksService: ArtworksServiceProtocol {
     private let networkService: NetworkServiceProtocol
 
-    init(networkService: NetworkServiceProtocol) {
+    public init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
 
-    func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void) {
+    public func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void) {
         networkService.request("https://api.artic.edu/api/v1/artworks?page=\(page)&limit=\(limit)",
                                method: .get,
                                parameters: nil) { result in

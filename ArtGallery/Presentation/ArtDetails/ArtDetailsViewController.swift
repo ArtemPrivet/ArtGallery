@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 protocol ArtDetailsViewProtocol: AnyObject {
     func update(artwork: ArtworkModel)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkResponseData {
+public struct NetworkResponseData {
     let jsonData: [String: Any]?
     let data: Data?
 

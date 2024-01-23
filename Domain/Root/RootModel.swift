@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct RootModel<T: Decodable>: Decodable {
-    let data: T
+public struct RootModel<T: Decodable>: Decodable {
+    public let data: T
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ArtistModel: Decodable {
-    let id: Int
-    let title: String
-    let birthDate: Int?
-    let deathDate: Int?
-    let description: String?
+public struct ArtistModel: Decodable {
+    public let id: Int
+    public let title: String
+    public let birthDate: Int?
+    public let deathDate: Int?
+    public let description: String?
 
     enum CodingKeys: String, CodingKey {
         case id

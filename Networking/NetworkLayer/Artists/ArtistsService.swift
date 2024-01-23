@@ -5,16 +5,16 @@
 //  Created by Artem Orlov on 21.01.24.
 //
 
-import Foundation
+import Domain
 
-final class ArtistsService: ArtistsServiceProtocol {
+public final class ArtistsService: ArtistsServiceProtocol {
     private let networkService: NetworkServiceProtocol
 
-    init(networkService: NetworkServiceProtocol) {
+    public init(networkService: NetworkServiceProtocol = NetworkService.shared) {
         self.networkService = networkService
     }
 
-    func loadArtist(id: Int, completion: @escaping (Result<ArtistModel, NetworkError>) -> Void) {
+    public func loadArtist(id: Int, completion: @escaping (Result<ArtistModel, NetworkError>) -> Void) {
         networkService.request("https://api.artic.edu/api/v1/artists/\(id)",
                                method: .get,
                                parameters: nil) { result in

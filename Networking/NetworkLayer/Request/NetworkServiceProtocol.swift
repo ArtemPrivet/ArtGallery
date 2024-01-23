@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias NetworkResult = Result<NetworkResponseData, NetworkError>
+public typealias NetworkResult = Result<NetworkResponseData, NetworkError>
 
-protocol NetworkServiceProtocol: AnyObject {
+public protocol NetworkServiceProtocol: AnyObject {
     func request(_ url: String,
                  method: NetworkHTTPMethod,
                  parameters: [String: Any]?,

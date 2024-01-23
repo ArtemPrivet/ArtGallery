@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum NetworkHTTPMethod: String {
+public enum NetworkHTTPMethod: String {
     case get = "GET"
 }

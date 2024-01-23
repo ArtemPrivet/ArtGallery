@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 protocol ArtworksViewProtocol: AnyObject {
     func updateArtworks()

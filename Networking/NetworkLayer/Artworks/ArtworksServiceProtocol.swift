@@ -5,8 +5,8 @@
 //  Created by Artem Orlov on 19.01.24.
 //
 
-import Foundation
+import Domain
 
-protocol ArtworksServiceProtocol: AnyObject {
+public protocol ArtworksServiceProtocol: AnyObject {
     func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void)
 }
