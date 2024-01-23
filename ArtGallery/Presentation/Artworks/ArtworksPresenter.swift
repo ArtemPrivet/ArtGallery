@@ -42,15 +42,34 @@ final class ArtworksPresenter {
         isLoading = true
         networking.loadArtworks(page: getNextPage(), limit: limit) { [weak self] result in
             self?.isLoading = false
-
+            guard let self = self else { return }
             switch result {
             case .success(let artworks):
-                guard let self = self else { return }
                 let uniqueArtworks = self.removeDuplicates(from: artworks)
                 self.artworks.append(contentsOf: uniqueArtworks)
                 self.view?.updateArtworks()
+                self.saveArtworks(uniqueArtworks)
             case .failure(let failure):
-                print(failure.localizedDescription)
+                if self.artworks.isEmpty {
+                    CoreDataManager.shared.fetchArtworks(context: CoreDataManager.shared.mainContext) { [weak self] data in
+                        if let data = data, !data.isEmpty {
+                            let artworks = data.map({ ArtworkModel(artworkDataModel: $0) })
+                            self?.artworks = artworks
+                            self?.view?.updateArtworks()
+                        }
+                    }
+                } else {
+                    // TODO: Show Alert
+                    print(failure.localizedDescription)
+                }
+            }
+        }
+    }
+
+    private func saveArtworks(_ artworks: [ArtworkModel]) {
+        CoreDataManager.shared.fetchArtworks(context: CoreDataManager.shared.mainContext) { data in
+            if data == nil || data?.isEmpty == true {
+                CoreDataManager.shared.saveArtworks(artworks, context: CoreDataManager.shared.mainContext)
             }
         }
     }

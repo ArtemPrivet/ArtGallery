@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A8FD1B2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A8FD192B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld */; };
+		00A8FD1D2B5FF1B900FA6BD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A8FD1C2B5FF1B900FA6BD3 /* CoreDataManager.swift */; };
 		00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01512B59C99A003DD59C /* AppDelegate.swift */; };
 		00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01532B59C99A003DD59C /* SceneDelegate.swift */; };
 		00BE015B2B59C99C003DD59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE015A2B59C99C003DD59C /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A8FD1A2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtGalleryCore.xcdatamodel; sourceTree = "<group>"; };
+		00A8FD1C2B5FF1B900FA6BD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		00BE014E2B59C99A003DD59C /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE01512B59C99A003DD59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00BE01532B59C99A003DD59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A8FD182B5FEE1800FA6BD3 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				00A8FD192B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld */,
+				00A8FD1C2B5FF1B900FA6BD3 /* CoreDataManager.swift */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
 		00BE01452B59C99A003DD59C = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +156,7 @@
 			children = (
 				00BE01B02B5D64AE003DD59C /* Presentation */,
 				00BE01952B5A8B6D003DD59C /* Domain */,
-				00BE01822B59CA1F003DD59C /* Storage */,
+				00BE01822B59CA1F003DD59C /* DataLAyer */,
 				00BE01812B59CA11003DD59C /* NetworkLayer */,
 				00BE01512B59C99A003DD59C /* AppDelegate.swift */,
 				00BE01532B59C99A003DD59C /* SceneDelegate.swift */,
@@ -183,11 +196,12 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		00BE01822B59CA1F003DD59C /* Storage */ = {
+		00BE01822B59CA1F003DD59C /* DataLAyer */ = {
 			isa = PBXGroup;
 			children = (
+				00A8FD182B5FEE1800FA6BD3 /* Coredata */,
 			);
-			path = Storage;
+			path = DataLAyer;
 			sourceTree = "<group>";
 		};
 		00BE01832B59CA3C003DD59C /* Artworks */ = {
@@ -435,10 +449,12 @@
 				00BE01982B5A8B8A003DD59C /* ArtworkModel.swift in Sources */,
 				00BE01AF2B5D2D30003DD59C /* ArtistModel.swift in Sources */,
 				00BE01B62B5D7E6D003DD59C /* ArtDetailsPresenter.swift in Sources */,
+				00A8FD1B2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld in Sources */,
 				00BE01902B5A8376003DD59C /* NetworkService.swift in Sources */,
 				00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */,
 				00BE01A42B5B12A5003DD59C /* ArtworksService.swift in Sources */,
 				00BE018D2B59D6FB003DD59C /* NetworkHTTPMethod.swift in Sources */,
+				00A8FD1D2B5FF1B900FA6BD3 /* CoreDataManager.swift in Sources */,
 				00BE01BA2B5D8A64003DD59C /* ArtworksRouter.swift in Sources */,
 				00BE01522B59C99A003DD59C /* AppDelegate.swift in Sources */,
 				00BE01542B59C99A003DD59C /* SceneDelegate.swift in Sources */,
@@ -814,6 +830,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		00A8FD192B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				00A8FD1A2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodel */,
+			);
+			currentVersion = 00A8FD1A2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodel */;
+			path = ArtGalleryCore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 00BE01462B59C99A003DD59C /* Project object */;
 }
