@@ -15,6 +15,14 @@ final class ArtworkCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var artNameLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.layer.cornerRadius = 12
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.black.cgColor
+        contentView.layer.masksToBounds = true
+    }
+
     func update(with artwork: ArtworkModel) {
         artNameLabel.text = artwork.title
 

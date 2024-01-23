@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,24 +18,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="199" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hq-dF-5H2">
-                        <rect key="frame" x="0.0" y="0.0" width="199" height="137"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hq-dF-5H2">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="178"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owC-bw-TVZ">
-                        <rect key="frame" x="12" y="145" width="175" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3E-WI-GJ4">
+                        <rect key="frame" x="0.0" y="137" width="199" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owC-bw-TVZ">
+                                <rect key="frame" x="12" y="8" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="owC-bw-TVZ" firstAttribute="top" secondItem="k3E-WI-GJ4" secondAttribute="top" constant="8" id="ARa-3Y-nkh"/>
+                            <constraint firstAttribute="bottom" secondItem="owC-bw-TVZ" secondAttribute="bottom" constant="12" id="Orb-6c-XKU"/>
+                            <constraint firstItem="owC-bw-TVZ" firstAttribute="leading" secondItem="k3E-WI-GJ4" secondAttribute="leading" constant="12" id="Sn9-O0-XeN"/>
+                            <constraint firstAttribute="trailing" secondItem="owC-bw-TVZ" secondAttribute="trailing" constant="12" id="u8F-eI-Nhq"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="owC-bw-TVZ" secondAttribute="bottom" constant="12" id="2dW-tf-kad"/>
                     <constraint firstItem="5hq-dF-5H2" firstAttribute="leading" secondItem="U9d-KG-JJL" secondAttribute="leading" id="48m-n8-Syb"/>
-                    <constraint firstAttribute="trailing" secondItem="owC-bw-TVZ" secondAttribute="trailing" constant="12" id="5pl-xs-SG7"/>
-                    <constraint firstItem="owC-bw-TVZ" firstAttribute="top" secondItem="5hq-dF-5H2" secondAttribute="bottom" constant="8" id="V2n-sb-kAi"/>
-                    <constraint firstItem="owC-bw-TVZ" firstAttribute="leading" secondItem="U9d-KG-JJL" secondAttribute="leading" constant="12" id="ZU4-dd-xyJ"/>
+                    <constraint firstAttribute="bottom" secondItem="k3E-WI-GJ4" secondAttribute="bottom" id="Opr-Dq-rW4"/>
                     <constraint firstItem="5hq-dF-5H2" firstAttribute="top" secondItem="U9d-KG-JJL" secondAttribute="top" id="j0Q-xH-vWQ"/>
+                    <constraint firstAttribute="bottom" secondItem="5hq-dF-5H2" secondAttribute="bottom" id="mzB-ad-Nu4"/>
+                    <constraint firstAttribute="trailing" secondItem="k3E-WI-GJ4" secondAttribute="trailing" id="tMI-1A-6CK"/>
                     <constraint firstAttribute="trailing" secondItem="5hq-dF-5H2" secondAttribute="trailing" id="vyS-QC-f80"/>
+                    <constraint firstItem="k3E-WI-GJ4" firstAttribute="leading" secondItem="U9d-KG-JJL" secondAttribute="leading" id="yto-oU-oO3"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="199" height="178"/>
@@ -45,4 +58,9 @@
             <point key="canvasLocation" x="-130.53435114503816" y="-52.112676056338032"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

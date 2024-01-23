@@ -14,6 +14,7 @@ protocol ArtworksViewProtocol: AnyObject {
 final class ArtworksViewController: UIViewController {
     private let presenter: ArtworksPresenter
     private var collectionView: UICollectionView!
+    private let refreshControl = UIRefreshControl()
 
     init(presenter: ArtworksPresenter) {
         self.presenter = presenter
@@ -26,9 +27,9 @@ final class ArtworksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
         self.title = "Artworks"
 
+        self.view.backgroundColor = .white
         createCollectionView()
         presenter.didLoadView()
     }
@@ -42,6 +43,7 @@ final class ArtworksViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = dataSource
+        collectionView.refreshControl = refreshControl
 
         collectionView.register(UINib(nibName: ArtworkCell.cellID, bundle: nil), forCellWithReuseIdentifier: ArtworkCell.cellID)
 
@@ -55,7 +57,9 @@ final class ArtworksViewController: UIViewController {
                 collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
             ]
         )
-        collectionView.backgroundColor = .green
+
+        refreshControl.addTarget(self, action: #selector(refreshArtworks), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Loading new artworks...")
 
         display(presenter.artworks)
     }
@@ -75,11 +79,17 @@ final class ArtworksViewController: UIViewController {
 
         dataSource.apply(snapshot)
     }
+
+    @objc
+    private func refreshArtworks() {
+        presenter.refreshArtworks()
+    }
 }
 
 extension ArtworksViewController: ArtworksViewProtocol {
     func updateArtworks() {
         display(presenter.artworks)
+        refreshControl.endRefreshing()
     }
 }
 

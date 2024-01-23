@@ -9,6 +9,7 @@ import Foundation
 
 protocol ArtworksPresenterProtocol: AnyObject {
     func didLoadView()
+    func refreshArtworks()
     func didScroll(to item: Int)
     func didSelect(item: Int)
 
@@ -72,6 +73,10 @@ final class ArtworksPresenter {
 
 extension ArtworksPresenter: ArtworksPresenterProtocol {
     func didLoadView() {
+        loadArtworks()
+    }
+
+    func refreshArtworks() {
         loadArtworks()
     }
 
