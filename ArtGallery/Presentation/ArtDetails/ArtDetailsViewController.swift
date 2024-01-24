@@ -26,18 +26,22 @@ final class ArtDetailsViewController: UIViewController {
     private var imageViewHeightConstraint: NSLayoutConstraint?
 
     private let titleLabel: UILabel = {
-        let view = UILabel()
-        return view
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
 
     private let artistNameLabel: UILabel = {
-        let view = UILabel()
-        return view
+        let label = UILabel()
+        label.textAlignment = .center
+        return label
     }()
 
     private let artistLifeLabel: UILabel = {
-        let view = UILabel()
-        return view
+        let label = UILabel()
+        label.textAlignment = .center
+        return label
     }()
 
     private let artistDescriptionLabel: UILabel = {
@@ -154,13 +158,18 @@ extension ArtDetailsViewController: ArtDetailsViewProtocol {
         artistNameLabel.isHidden = false
 
         if let birthDate = artist.birthDate {
-            artistLifeLabel.text = "\(birthDate) - \(artist.deathDate == nil ? "Nowadays" : "\(artist.birthDate!)")"
+            artistLifeLabel.text = "\(birthDate) - \(artist.deathDate == nil ? "Nowadays" : "\(artist.deathDate!)")"
             artistLifeLabel.isHidden = false
         }
 
         if let description = artist.description {
-            artistDescriptionLabel.attributedText = description.htmlToAttributedString
-            artistDescriptionLabel.isHidden = false
+            if let artistDescription = description.htmlToAttributedString {
+                let attributedText = NSMutableAttributedString(attributedString: artistDescription)
+                attributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 14), range: NSRange(location: 0, length: attributedText.length))
+                artistDescriptionLabel.attributedText = attributedText
+
+                artistDescriptionLabel.isHidden = false
+            }
         }
     }
 }

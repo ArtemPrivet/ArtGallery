@@ -12,7 +12,6 @@
 		008581122B61269100F3BC9B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01912B5A84C5003DD59C /* NetworkError.swift */; };
 		008581142B61456300F3BC9B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008581132B61456300F3BC9B /* String+Extension.swift */; };
 		00A3B3272B604445001D3BF6 /* Networking.docc in Sources */ = {isa = PBXBuildFile; fileRef = 00A3B3262B604445001D3BF6 /* Networking.docc */; };
-		00A3B32D2B604446001D3BF6 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A3B3232B604445001D3BF6 /* Networking.framework */; };
 		00A3B3332B604446001D3BF6 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A3B3252B604445001D3BF6 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00A3B33B2B604495001D3BF6 /* ArtistsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01AA2B5D2A5F003DD59C /* ArtistsService.swift */; };
 		00A3B33D2B60449D001D3BF6 /* ArtworksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01A32B5B12A5003DD59C /* ArtworksService.swift */; };
@@ -52,13 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00A3B32E2B604446001D3BF6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00BE01462B59C99A003DD59C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00A3B3222B604445001D3BF6;
-			remoteInfo = Networking;
-		};
 		00A3B3462B6044EB001D3BF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00BE01462B59C99A003DD59C /* Project object */;
@@ -81,13 +73,6 @@
 			remoteInfo = Domain;
 		};
 		00BE01652B59C99C003DD59C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00BE01462B59C99A003DD59C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00BE014D2B59C99A003DD59C;
-			remoteInfo = ArtGallery;
-		};
-		00BE016F2B59C99D003DD59C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00BE01462B59C99A003DD59C /* Project object */;
 			proxyType = 1;
@@ -127,7 +112,6 @@
 		00A3B3232B604445001D3BF6 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A3B3252B604445001D3BF6 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		00A3B3262B604445001D3BF6 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
-		00A3B32C2B604446001D3BF6 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A3B34E2B604F87001D3BF6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A3B3502B604F87001D3BF6 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		00A3B3512B604F87001D3BF6 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -141,7 +125,6 @@
 		00BE015D2B59C99C003DD59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE015F2B59C99C003DD59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00BE01642B59C99C003DD59C /* ArtGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00BE016E2B59C99D003DD59C /* ArtGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE01882B59D4E0003DD59C /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		00BE018A2B59D634003DD59C /* NetworkResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseData.swift; sourceTree = "<group>"; };
 		00BE018C2B59D6FB003DD59C /* NetworkHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPMethod.swift; sourceTree = "<group>"; };
@@ -175,14 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00A3B3292B604446001D3BF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00A3B32D2B604446001D3BF6 /* Networking.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		00A3B34B2B604F87001D3BF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,13 +176,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		00BE01612B59C99C003DD59C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00BE016B2B59C99D003DD59C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,9 +266,7 @@
 			children = (
 				00BE014E2B59C99A003DD59C /* ArtGallery.app */,
 				00BE01642B59C99C003DD59C /* ArtGalleryTests.xctest */,
-				00BE016E2B59C99D003DD59C /* ArtGalleryUITests.xctest */,
 				00A3B3232B604445001D3BF6 /* Networking.framework */,
-				00A3B32C2B604446001D3BF6 /* NetworkingTests.xctest */,
 				00A3B34E2B604F87001D3BF6 /* Domain.framework */,
 			);
 			name = Products;
@@ -482,24 +448,6 @@
 			productReference = 00A3B3232B604445001D3BF6 /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		00A3B32B2B604446001D3BF6 /* NetworkingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00A3B3392B604446001D3BF6 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
-			buildPhases = (
-				00A3B3282B604446001D3BF6 /* Sources */,
-				00A3B3292B604446001D3BF6 /* Frameworks */,
-				00A3B32A2B604446001D3BF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00A3B32F2B604446001D3BF6 /* PBXTargetDependency */,
-			);
-			name = NetworkingTests;
-			productName = NetworkingTests;
-			productReference = 00A3B32C2B604446001D3BF6 /* NetworkingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		00A3B34D2B604F87001D3BF6 /* Domain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00A3B3542B604F87001D3BF6 /* Build configuration list for PBXNativeTarget "Domain" */;
@@ -559,24 +507,6 @@
 			productReference = 00BE01642B59C99C003DD59C /* ArtGalleryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		00BE016D2B59C99D003DD59C /* ArtGalleryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00BE017E2B59C99D003DD59C /* Build configuration list for PBXNativeTarget "ArtGalleryUITests" */;
-			buildPhases = (
-				00BE016A2B59C99D003DD59C /* Sources */,
-				00BE016B2B59C99D003DD59C /* Frameworks */,
-				00BE016C2B59C99D003DD59C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00BE01702B59C99D003DD59C /* PBXTargetDependency */,
-			);
-			name = ArtGalleryUITests;
-			productName = ArtGalleryUITests;
-			productReference = 00BE016E2B59C99D003DD59C /* ArtGalleryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -590,9 +520,6 @@
 					00A3B3222B604445001D3BF6 = {
 						CreatedOnToolsVersion = 15.1;
 					};
-					00A3B32B2B604446001D3BF6 = {
-						CreatedOnToolsVersion = 15.1;
-					};
 					00A3B34D2B604F87001D3BF6 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -600,10 +527,6 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					00BE01632B59C99C003DD59C = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 00BE014D2B59C99A003DD59C;
-					};
-					00BE016D2B59C99D003DD59C = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 00BE014D2B59C99A003DD59C;
 					};
@@ -627,9 +550,7 @@
 			targets = (
 				00BE014D2B59C99A003DD59C /* ArtGallery */,
 				00BE01632B59C99C003DD59C /* ArtGalleryTests */,
-				00BE016D2B59C99D003DD59C /* ArtGalleryUITests */,
 				00A3B3222B604445001D3BF6 /* Networking */,
-				00A3B32B2B604446001D3BF6 /* NetworkingTests */,
 				00A3B34D2B604F87001D3BF6 /* Domain */,
 			);
 		};
@@ -637,13 +558,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		00A3B3212B604445001D3BF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00A3B32A2B604446001D3BF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -674,13 +588,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BE016C2B59C99D003DD59C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -695,13 +602,6 @@
 				00A3B3402B6044A8001D3BF6 /* NetworkHTTPMethod.swift in Sources */,
 				00A3B3272B604445001D3BF6 /* Networking.docc in Sources */,
 				00A3B33B2B604495001D3BF6 /* ArtistsService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00A3B3282B604446001D3BF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,21 +648,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00BE016A2B59C99D003DD59C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00A3B32F2B604446001D3BF6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00A3B3222B604445001D3BF6 /* Networking */;
-			targetProxy = 00A3B32E2B604446001D3BF6 /* PBXContainerItemProxy */;
-		};
 		00A3B3472B6044EB001D3BF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00A3B3222B604445001D3BF6 /* Networking */;
@@ -782,11 +670,6 @@
 			isa = PBXTargetDependency;
 			target = 00BE014D2B59C99A003DD59C /* ArtGallery */;
 			targetProxy = 00BE01652B59C99C003DD59C /* PBXContainerItemProxy */;
-		};
-		00BE01702B59C99D003DD59C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00BE014D2B59C99A003DD59C /* ArtGallery */;
-			targetProxy = 00BE016F2B59C99D003DD59C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -877,42 +760,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		00A3B3362B604446001D3BF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4H2WWUCQQY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.NetworkingTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		00A3B3372B604446001D3BF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4H2WWUCQQY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.NetworkingTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1046,7 +893,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1103,7 +950,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1182,7 +1029,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4H2WWUCQQY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGalleryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1202,7 +1049,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4H2WWUCQQY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGalleryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1210,42 +1057,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArtGallery";
-			};
-			name = Release;
-		};
-		00BE017F2B59C99D003DD59C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4H2WWUCQQY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGalleryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ArtGallery;
-			};
-			name = Debug;
-		};
-		00BE01802B59C99D003DD59C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4H2WWUCQQY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "artem-orlov.ArtGalleryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ArtGallery;
 			};
 			name = Release;
 		};
@@ -1257,15 +1068,6 @@
 			buildConfigurations = (
 				00A3B3342B604446001D3BF6 /* Debug */,
 				00A3B3352B604446001D3BF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00A3B3392B604446001D3BF6 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00A3B3362B604446001D3BF6 /* Debug */,
-				00A3B3372B604446001D3BF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1302,15 +1104,6 @@
 			buildConfigurations = (
 				00BE017C2B59C99D003DD59C /* Debug */,
 				00BE017D2B59C99D003DD59C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00BE017E2B59C99D003DD59C /* Build configuration list for PBXNativeTarget "ArtGalleryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00BE017F2B59C99D003DD59C /* Debug */,
-				00BE01802B59C99D003DD59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
