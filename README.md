@@ -42,8 +42,6 @@
     <a href="https://github.com/ArtemPrivet/ArtGallery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ArtemPrivet/ArtGallery">View Demo</a>
-    ·
     <a href="https://github.com/ArtemPrivet/ArtGallery/issues">Report Bug</a>
     ·
     <a href="https://github.com/ArtemPrivet/ArtGallery/issues">Request Feature</a>
@@ -76,7 +74,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://api.artic.edu/docs/assets/logo.svg)
+[![Product Name Screen Shot][product-screenshot]]
 
 App is using an open API of Art Institute of Chicago. 
 * Supports iOS 13.0+
@@ -88,6 +86,8 @@ App is using an open API of Art Institute of Chicago.
 
 <details>
   <summary>More Info:</summary>
+
+
 I chose UIKit in building this app since the minimum supported iOS version is 13. At this version, SwiftUI is relatively new and lacks stability. 
 
 Regarding the architecture, given the project's size, complex architectures aren't necessary. Therefore, I've implemented a Presenter to shift a significant portion of the logic away from the ViewController. This approach not only segregates responsibilities but also facilitates the testing of logic.
@@ -101,7 +101,7 @@ Domain: Contains all the models used in the project, along with relevant protoco
 Networking: Centralizes all the logic required to request data from the internet.
 
 
-* The only third-party library used is Kingfisher, which simplifies working with images.
+The only third-party library used is Kingfisher, which simplifies working with images.
 
 
 </details>
@@ -179,4 +179,4 @@ Don't forget to give the project a star! Thanks again!
 [license-url]: https://github.com/ArtemPrivet/ArtGallery/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/artem-orlov-ios/
-[product-screenshot]: https://api.artic.edu/docs/assets/logo.svg
+[product-screenshot]: images/main_screen.pgn
