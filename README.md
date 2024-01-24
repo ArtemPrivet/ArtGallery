@@ -93,9 +93,7 @@ App is using an open API of Art Institute of Chicago.
 
 <details>
   <summary>More Info:</summary>
-
-
-I chose UIKit in building this app since the minimum supported iOS version is 13. At this version, SwiftUI is relatively new and lacks stability. 
+UIKit was chosen in this app since the minimum supported iOS version is 13. At this version, SwiftUI is relatively new and lacks stability. 
 
 Regarding the architecture, given the project's size, complex architectures aren't necessary. Therefore, I've implemented a Presenter to shift a significant portion of the logic away from the ViewController. This approach not only segregates responsibilities but also facilitates the testing of logic.
 
@@ -103,9 +101,11 @@ Additionally, I introduced a Router to extract navigation logic from the View. A
 
 The project is segmented into three modules: ArtGallery, Domain, and Networking.
 
-ArtGallery: Contains all the screens and logic for them.
-Domain: Contains all the models used in the project, along with relevant protocols.
-Networking: Centralizes all the logic required to request data from the internet.
+<b>ArtGallery</b>: Contains all the screens and logic for them.
+
+<b>Domain</b>: Contains all the models used in the project, along with relevant protocols.
+
+<b>Networking</b>: Centralizes all the logic required to request data from the internet.
 
 
 The only third-party library used is Kingfisher, which simplifies working with images.
