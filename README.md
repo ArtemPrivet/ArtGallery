@@ -37,7 +37,7 @@
 <h3 align="center">Art Gallery</h3>
 
   <p align="center">
-    App with a list of arts
+    The way to exlore arts
     <br />
     <a href="https://github.com/ArtemPrivet/ArtGallery"><strong>Explore the docs »</strong></a>
     <br />
@@ -74,7 +74,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+<details>
+  <summary>Screenshots</summary>
+  <div>
+  <img src="images/main_screen.png" alt="Logo" width="375" height="667" margin-right="100">
+  <img src="images/details.png" alt="Logo" width="375" height="667">
+</div>
+</details>
+
 
 App is using an open API of Art Institute of Chicago. 
 * Supports iOS 13.0+
@@ -179,4 +186,4 @@ Don't forget to give the project a star! Thanks again!
 [license-url]: https://github.com/ArtemPrivet/ArtGallery/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/artem-orlov-ios/
-[product-screenshot]: images/main_screen.pgn
+[product-screenshot]: images/main_screen.png
