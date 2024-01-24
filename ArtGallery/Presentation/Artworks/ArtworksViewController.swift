@@ -10,6 +10,8 @@ import Domain
 
 protocol ArtworksViewProtocol: AnyObject {
     func updateArtworks()
+    func stopLoading()
+    func showError(message: String)
 }
 
 final class ArtworksViewController: UIViewController {
@@ -90,6 +92,16 @@ final class ArtworksViewController: UIViewController {
 extension ArtworksViewController: ArtworksViewProtocol {
     func updateArtworks() {
         display(presenter.artworks)
+    }
+
+    func showError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(closeAction)
+        present(alert, animated: true)
+    }
+
+    func stopLoading() {
         refreshControl.endRefreshing()
     }
 }

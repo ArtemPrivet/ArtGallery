@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Domain
 @testable import ArtGallery
 
 final class ArtworksPresenterTests: XCTestCase {
@@ -96,6 +97,28 @@ final class ArtworksPresenterTests: XCTestCase {
 
         XCTAssertEqual(networking.callCount, 2)
         XCTAssertEqual(networking.page, 2)
+        XCTAssertEqual(networking.limit, limit)
+        XCTAssertEqual(presenter.artworks.count, limit)
+    }
+
+    func testSelectItem() {
+        networking.loadArtworksCompletion = .success(createDummyArtworks(from: 0, to: limit - 1))
+
+        XCTAssertNil(router.selectedModel)
+
+        presenter.didLoadView()
+        presenter.didSelect(item: 3)
+
+        XCTAssertEqual(router.selectedModel?.id, 3)
+    }
+
+    func testRefreshArtworks() {
+        networking.loadArtworksCompletion = .success(createDummyArtworks(from: 0, to: limit - 1))
+
+        presenter.refreshArtworks()
+
+        XCTAssertEqual(networking.callCount, 1)
+        XCTAssertEqual(networking.page, 1)
         XCTAssertEqual(networking.limit, limit)
         XCTAssertEqual(presenter.artworks.count, limit)
     }

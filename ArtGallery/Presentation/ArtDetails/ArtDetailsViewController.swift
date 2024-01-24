@@ -23,6 +23,8 @@ final class ArtDetailsViewController: UIViewController {
         return view
     }()
 
+    private var imageViewHeightConstraint: NSLayoutConstraint?
+
     private let titleLabel: UILabel = {
         let view = UILabel()
         return view
@@ -44,8 +46,7 @@ final class ArtDetailsViewController: UIViewController {
         return view
     }()
 
-
-    func setupScrollView(){
+    private func setupScrollView(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -72,7 +73,8 @@ final class ArtDetailsViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-
+        imageViewHeightConstraint = imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 183.0 / 275.0)
+        imageViewHeightConstraint?.isActive = true
 
         contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -137,6 +139,7 @@ extension ArtDetailsViewController: ArtDetailsViewProtocol {
                 case .success:
                     if let thumbnail = artwork.thumbnail {
                         guard let imageView = self?.imageView else { return }
+                        self?.imageViewHeightConstraint?.isActive = false
                         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: CGFloat(thumbnail.height) / CGFloat(thumbnail.width)).isActive = true
                         self?.view.layoutIfNeeded()
                     }
@@ -158,17 +161,6 @@ extension ArtDetailsViewController: ArtDetailsViewProtocol {
         if let description = artist.description {
             artistDescriptionLabel.attributedText = description.htmlToAttributedString
             artistDescriptionLabel.isHidden = false
-        }
-    }
-}
-
-extension String {
-    var htmlToAttributedString: NSAttributedString? {
-        guard let data = data(using: .utf8) else { return nil }
-        do {
-            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
-        } catch {
-            return nil
         }
     }
 }

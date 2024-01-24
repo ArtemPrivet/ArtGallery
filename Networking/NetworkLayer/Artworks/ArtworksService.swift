@@ -10,7 +10,7 @@ import Domain
 public final class ArtworksService: ArtworksServiceProtocol {
     private let networkService: NetworkServiceProtocol
 
-    public init(networkService: NetworkServiceProtocol) {
+    public init(networkService: NetworkServiceProtocol = NetworkService.shared) {
         self.networkService = networkService
     }
 

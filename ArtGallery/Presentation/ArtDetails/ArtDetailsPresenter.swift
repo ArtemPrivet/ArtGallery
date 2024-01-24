@@ -5,7 +5,6 @@
 //  Created by Artem Orlov on 21.01.24.
 //
 
-import Networking
 import Domain
 
 protocol ArtDetailsPresenterProtocol: AnyObject {

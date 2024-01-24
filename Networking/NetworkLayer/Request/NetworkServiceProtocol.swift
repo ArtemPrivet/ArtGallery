@@ -5,7 +5,7 @@
 //  Created by Artem Orlov on 18.01.24.
 //
 
-import Foundation
+import Domain
 
 public typealias NetworkResult = Result<NetworkResponseData, NetworkError>
 

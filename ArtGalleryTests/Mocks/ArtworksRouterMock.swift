@@ -6,12 +6,13 @@
 //
 
 import XCTest
+import Domain
 @testable import ArtGallery
 
 final class ArtworksRouterMock: ArtworksRouterProtocol {
-    var selectedModel: ArtGallery.ArtworkModel?
+    var selectedModel: ArtworkModel?
 
-    func didSelectArtwork(_ model: ArtGallery.ArtworkModel) {
+    func didSelectArtwork(_ model: ArtworkModel) {
         selectedModel = model
     }
 }

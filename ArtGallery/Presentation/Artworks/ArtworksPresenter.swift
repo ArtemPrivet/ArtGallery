@@ -6,7 +6,6 @@
 //
 
 import Domain
-import Networking
 
 protocol ArtworksPresenterProtocol: AnyObject {
     func didLoadView()
@@ -43,6 +42,7 @@ final class ArtworksPresenter {
         isLoading = true
         networking.loadArtworks(page: getNextPage(), limit: limit) { [weak self] result in
             self?.isLoading = false
+            self?.view?.stopLoading()
             guard let self = self else { return }
             switch result {
             case .success(let artworks):
@@ -57,11 +57,12 @@ final class ArtworksPresenter {
                             let artworks = data.map({ ArtworkModel(artworkDataModel: $0) })
                             self?.artworks = artworks
                             self?.view?.updateArtworks()
+                        } else {
+                            self?.view?.showError(message: "Cant load artworks")
                         }
                     }
                 } else {
-                    // TODO: Show Alert
-                    print(failure.localizedDescription)
+                    print(failure)
                 }
             }
         }
