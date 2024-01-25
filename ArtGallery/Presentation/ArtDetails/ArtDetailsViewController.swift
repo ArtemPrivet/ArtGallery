@@ -32,6 +32,7 @@ final class ArtDetailsViewController: UIViewController {
         view.contentMode = .scaleAspectFit
         imageViewHeightConstraint = view.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 183.0 / 275.0)
         imageViewHeightConstraint?.isActive = true
+        view.image = UIImage(named: "image_placeholder")
         return view
     }()
 
@@ -117,13 +118,11 @@ extension ArtDetailsViewController: ArtDetailsViewProtocol {
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(titleLabel.wrap(horizontal: 12))
 
-
-        imageView.backgroundColor = .cyan
         titleLabel.text = artwork.title
 
         if let imageID = artwork.imageID {
-            let url = URL(string: "https://www.artic.edu/iiif/2/\(imageID)/full/800,/0/default.jpg")
-            imageView.kf.setImage(with: url, placeholder: UIImage(named: "image_placeholder")) { [weak self] result in
+            let url = URL(string: "https://www.artic.edu/iiif/2/\(imageID)/full/843,/0/default.jpg")
+            imageView.kf.setImage(with: url) { [weak self] result in
                 switch result {
                 case .success:
                     if let thumbnail = artwork.thumbnail {
