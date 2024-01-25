@@ -15,9 +15,13 @@ public final class ArtworksService: ArtworksServiceProtocol {
     }
 
     public func loadArtworks(page: Int, limit: Int, completion: @escaping (Result<[ArtworkModel], NetworkError>) -> Void) {
-        networkService.request("https://api.artic.edu/api/v1/artworks?page=\(page)&limit=\(limit)",
+        networkService.request("https://api.artic.edu/api/v1/artworks",
                                method: .get,
-                               parameters: nil) { result in
+                               parameters: [
+                                "page": String(page),
+                                "limit": String(limit),
+                                "fields": "id,thumbnail,image_id,title,artist_id"
+                               ]) { result in
             DispatchQueue.main.async {
             
                 switch result {

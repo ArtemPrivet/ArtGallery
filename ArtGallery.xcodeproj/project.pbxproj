@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00207C642B6273AB00474B2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00207C632B6273AB00474B2E /* UIView+Extension.swift */; };
 		0085810F2B6125C300F3BC9B /* ArtistsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01A82B5D2A57003DD59C /* ArtistsServiceProtocol.swift */; };
 		008581102B6125C800F3BC9B /* ArtworksServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01932B5A88BC003DD59C /* ArtworksServiceProtocol.swift */; };
 		008581122B61269100F3BC9B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE01912B5A84C5003DD59C /* NetworkError.swift */; };
@@ -108,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00207C632B6273AB00474B2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		008581132B61456300F3BC9B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		00A3B3232B604445001D3BF6 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A3B3252B604445001D3BF6 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				008581132B61456300F3BC9B /* String+Extension.swift */,
+				00207C632B6273AB00474B2E /* UIView+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BE01B62B5D7E6D003DD59C /* ArtDetailsPresenter.swift in Sources */,
+				00207C642B6273AB00474B2E /* UIView+Extension.swift in Sources */,
 				00A8FD1B2B5FEE5300FA6BD3 /* ArtGalleryCore.xcdatamodeld in Sources */,
 				00BE019C2B5A8F7F003DD59C /* ArtworksPresenter.swift in Sources */,
 				00A8FD1D2B5FF1B900FA6BD3 /* CoreDataManager.swift in Sources */,

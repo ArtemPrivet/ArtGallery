@@ -12,7 +12,7 @@ public typealias NetworkResult = Result<NetworkResponseData, NetworkError>
 public protocol NetworkServiceProtocol: AnyObject {
     func request(_ url: String,
                  method: NetworkHTTPMethod,
-                 parameters: [String: Any]?,
+                 parameters: [String: String],
                  completion: @escaping ((NetworkResult) -> Void))
 
 }

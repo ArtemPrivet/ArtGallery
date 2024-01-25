@@ -17,7 +17,7 @@ public final class ArtistsService: ArtistsServiceProtocol {
     public func loadArtist(id: Int, completion: @escaping (Result<ArtistModel, NetworkError>) -> Void) {
         networkService.request("https://api.artic.edu/api/v1/artists/\(id)",
                                method: .get,
-                               parameters: nil) { result in
+                               parameters: [:]) { result in
             switch result {
             case .success(let data):
                 guard let jsonData = data.data else {

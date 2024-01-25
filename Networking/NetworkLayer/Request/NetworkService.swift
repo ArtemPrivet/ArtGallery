@@ -17,9 +17,18 @@ public final class NetworkService: NetworkServiceProtocol {
 
     public func request(_ url: String,
                  method: NetworkHTTPMethod,
-                 parameters: [String : Any]?,
+                 parameters: [String : String],
                  completion: @escaping ((NetworkResult) -> Void)) {
         guard let url = URL(string: url) else {
+            completion(.failure(.incorrectURL))
+            return
+        }
+
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        components?.queryItems = parameters.map({ parameter in
+            URLQueryItem(name: parameter.key, value: parameter.value)
+        })
+        guard let url = components?.url else {
             completion(.failure(.incorrectURL))
             return
         }
